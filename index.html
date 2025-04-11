@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 11: ¡Pulido de Píxeles y Código! – Verificación Final Pro</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            list-style: none;
+            display: block;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;}
+
+        summary {
+           display: block;
+           list-style: none;
+        }
+        summary::-webkit-details-marker {
+           display: none;
+        }
+
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            }
+        }
+
+        window.onload = () => {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 11: ¡Pulido de Píxeles y Código! – Verificación Final Pro</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('activity_0_content')">
+                <div class="title">📝 Resumen de Sesión</div>
+            </div>
+            <div id="activity_0_content" class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Realizar la depuración final intensiva del Prototipo Avanzado.</li>
+                                <li>Pulir aspectos visuales (píxeles) y sonoros para una experiencia refinada.</li>
+                                <li>Verificar que TODAS las funcionalidades implementadas (núcleo + features) funcionen correctamente juntas.</li>
+                                <li>Preparar el prototipo para la entrega final.</li>
+                            </ul>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong>
+                            <ul>
+                                <li>Prototipo Avanzado depurado, pulido y completamente funcional según lo planificado.</li>
+                                <li>Todas las tareas relevantes en el Kanban marcadas como "¡Listo!".</li>
+                                <li>Proyecto Scratch listo para el guardado y entrega final en la próxima sesión.</li>
+                            </ul>
+                             <strong>🛠️ Materiales/Preparación:</strong>
+                            <ul>
+                                <li>Dispositivos con acceso a Scratch y los proyectos avanzados casi completos.</li>
+                                <li>Tablero Kanban de cada equipo actualizado.</li>
+                                <li>Acceso al T-Bar y diseño/flujo completo del prototipo.</li>
+                                <li>Proyector o pantalla.</li>
+                                <li>(Opcional) Checklist de funcionalidades a verificar.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: Stand-up Cierre Técnico -->
+        <div id="activity-1" class="activity">
+             <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">🧐 Actividad 1: Stand-up Cierre Técnico ⏰ Tiempo: 5 minutos</div>
+             </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (1 min):</strong> Iniciar sesión enfocando en la verificación y pulido final.
+                                (<strong>Proyectar Diapositiva 1</strong>: Título "Sesión 11: ¡Pulido y Verificación Final Pro!" y Objetivo).
+                            </td>
+                            <td>
+                                "¡Equipos Pro, estamos muy cerca de la meta! Hoy es la sesión de Verificación Final Pro. Vamos a asegurarnos de que nuestro Prototipo Avanzado no solo funcione, sino que brille ✨. ¡Es hora de pulir píxeles y código!"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (4 min):</strong> Guiar revisión final del Kanban. Preguntar por últimos bugs o detalles a pulir.
+                                (<strong>Proyectar Diapositiva 2</strong>: Visual del Kanban casi completo. Pregunta: "¿Últimos bugs o detalles por pulir?").
+                            </td>
+                            <td>
+                                "Último vistazo al Kanban. ¿Queda alguna tarea pendiente o algún bug conocido que debamos abordar hoy?"
+                                <br><br>
+                                "Además de bugs, ¿qué pequeños detalles visuales (píxeles, alineación, colores) o sonoros creen que necesitan un último toque de pulido para que quede perfecto?"
+                                <br><br>
+                                <em>(Facilitar que cada equipo identifique la lista final de tareas de depuración y pulido para hoy).</em>
+                                <br><br>
+                                "¡Lista de retoques finales definida! ¡A trabajar!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: ¡Acabado Maestro! Pulido y Pruebas Finales -->
+        <div id="activity-2" class="activity">
+             <div class="banner" onclick="toggleContent('activity_2_content')">
+                 <div class="title">✨ Actividad 2: ¡Acabado Maestro! Pulido y Pruebas Finales ⏰ Tiempo: 30 minutos</div>
+             </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (10 min):</strong> Facilitar depuración final intensiva. Equipos corrigen últimos bugs.
+                                (<strong>Proyectar Diapositiva 3</strong>: Título "Depuración Final Intensiva 🐞🔫". Iconos: Bug siendo eliminado, código limpio).
+                            </td>
+                            <td>
+                                "¡Primer bloque: Depuración Final! Concentrados en eliminar esos últimos bugs que identificaron. ¡Queremos un código lo más limpio posible!"
+                                <br><br>
+                                "Programadores/as, a la caza final. Testers, verifiquen las correcciones. Arquitectos/as, aseguren la estabilidad."
+                                <br><br>
+                                <em>(Circular y ofrecer apoyo intensivo en la resolución de los últimos errores).</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (10 min):</strong> Guiar limpieza visual (alineación, colores consistentes) y verificación de sonidos (volumen, timing).
+                                (<strong>Proyectar Diapositiva 4</strong>: Título "Limpieza Visual y Sonora ✨🔊". Iconos: Regla/Escuadra (alineación), Paleta de colores consistentes, Ondas sonoras ajustadas).
+                            </td>
+                            <td>
+                                "¡Ahora, el toque del artista! Pulido de Píxeles y Sonido."
+                                <br><br>
+                                "Revisen la alineación de los elementos en pantalla. ¿Todo está donde debería? ¿Los colores son consistentes en todo el proyecto?"
+                                <br><br>
+                                "Verifiquen los sonidos por última vez: ¿Volumen adecuado? ¿Suenan exactamente cuándo deben?"
+                                <br><br>
+                                "¡Que la experiencia sea agradable a la vista y al oído!"
+                                <br><br>
+                                <em>(Circular y dar feedback sobre aspectos visuales y sonoros, sugerir pequeños ajustes).</em>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 3 (10 min):</strong> Conducir prueba COMPLETA de TODAS las funcionalidades implementadas (núcleo + features). Verificar que todo funciona junto. Asegurar que tareas relevantes estén en "¡Listo!".
+                                (<strong>Proyectar Diapositiva 5</strong>: Título "¡Prueba Completa Final! ✅💯". Icono: Checklist largo completo, Red de nodos interconectados).
+                            </td>
+                            <td>
+                                "¡El momento cumbre de la verificación! Vamos a probar TODO. Desde el inicio hasta el final, incluyendo el núcleo Y todas las features que implementaron."
+                                <br><br>
+                                "Ejecuten todas las interacciones posibles. ¿Funciona todo junto sin problemas? ¿La integración es sólida?"
+                                <br><br>
+                                "¡Este es el test final para asegurar que el prototipo avanzado está completo y funcional!"
+                                <br><br>
+                                "A medida que verifiquen que todo funciona, asegúrense de que TODAS las tareas correspondientes en su Kanban estén en '¡Listo! (✅)'."
+                                <br><br>
+                                <em>(Observar las pruebas finales. Intervenir solo si surge un problema crítico inesperado. Confirmar que los Kanbans reflejen la finalización).</em>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Cierre Técnico y Pre-Entrega -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                <div class="title">🏁 Actividad 3: Cierre Técnico y Pre-Entrega ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                 <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (3 min):</strong> Confirmar con equipos que el prototipo está completo y funcional según lo planificado. Preguntar si están listos para la entrega final.
+                                (<strong>Proyectar Diapositiva 6</strong>: Título "¿Prototipo Listo para Entrega? 🤔✅". Icono: Caja de regalo 🎁, Checkmark grande).
+                            </td>
+                            <td>
+                                "¡Equipos Pro! Después de este pulido y verificación final..."
+                                <br><br>
+                                "Confirmen como equipo: ¿Consideran que su Prototipo Avanzado está completo? ¿Funciona todo (núcleo y features) como lo planificaron?"
+                                <br><br>
+                                "Levanten la mano los equipos que sienten que están listos para la entrega final en la próxima sesión."
+                                <br><br>
+                                <em>(Verificar el estado de ánimo y confirmación de los equipos).</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (2 min):</strong> Cerrar sesión. Recordar guardar versión final (preparación para Sesión 12). Anticipar entrega VIP.
+                            </td>
+                            <td>
+                                "¡Excelente trabajo, Equipos Pro! Han llegado al final del desarrollo y pulido."
+                                <br><br>
+                                "¡ESENCIAL! Guarden esta versión final pulida y probada. ¡Es la que entregarán!"
+                                <br><br>
+                                "La próxima sesión, la última, será la ¡Entrega Final VIP! Prepararemos el archivo y realizaremos la entrega oficial."
+                                <br><br>
+                                "¡Casi hemos completado la misión avanzada! ¡Nos vemos en la Sesión 12!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
